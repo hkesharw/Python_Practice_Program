@@ -10,13 +10,11 @@ logic - for i in range(1,6):
 
 num = int(input("Give the number of times you want to add : "))
 
-result = 1
-i = 1
+result = 0
+fact = 1
 for i in range(1, num+1):
-
-    for j in range(i, i+1):
-        x = i
-        result = x/result*j
+    fact = fact * i
+    result = result + (i/fact)
 
 
 print(result)
