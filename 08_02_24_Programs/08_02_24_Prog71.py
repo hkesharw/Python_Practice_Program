@@ -8,21 +8,21 @@ Object :
 
 l1 = [2, 3, 5, 6]
 l2 = [2, 3, 4, 2]
-l3 = []
+k = list(l2)
+
+
 for i in range(len(l1)):
+
     item = l1[i]
-    k = len(l2)
-    for j in range(k):
-        if item == l2[j]:
-            l2.pop()
-    l3.append(l1[i])
 
-l3.append(l2)
+    for j in range(len(k)-1):
 
-print(l1)
-print(l2)
-print(l3)
+        if k[j] == item:
 
+            k.remove(k[j])
+print(f"first list {l1}")
+print(f"Second list {l2}")
 
-
+print(f"Intersecion of first and second list {l1+k}")
+print(f"Union of first and second list {l1+l2}")
 
